@@ -1,54 +1,45 @@
 let score = 0;
 let questA = prompt(
-  "Does pineapple belond on pizza? Enter 0 for No, 1 for Yes",
+  "Does pineapple belond on pizza? Enter A for No, B for Yes",
 );
 if (questA !== null) {
-  questA = questA * 1;
-
-  if (questA !== 0 && questA !== 1) {
-    console.log("Please enter a 0 or 1 for the answer for question 1");
-  } else if (questA === 0) {
+  if (questA !== "A" && questA !== "B" && questA !== "a" && questA !== "b") {
+    console.log("Please enter an A or B for the answer for question 1");
+  } else if (questA === "A" || questA === "a") {
     score++;
   } else {
     console.log(
-      "Sorry the correct answer for Question 1 is No. Pineapple does not belong on pizza",
+      "Sorry the correct answer for Question 1 is A (No). Pineapple does not belong on pizza",
     );
   }
 } else console.log("You did not answer question 1");
 
 let questB = prompt(
-  "What city is in New York. Enter 0 for NYC or Enter 1 for Boston",
+  "Should Morgan go to Vegas? Enter A for Yes or Enter B for No",
 );
 if (questB !== null) {
-  questB = questB * 1;
-
-  if (questB !== 0 && questB !== 1) {
-    alert(
-      "Please enter a 0 or 1 for the answer for question 2. Restarting the pop quiz",
-    );
-    console.log("Please enter a 0 or 1 for the answer for question 2");
-  } else if (questB === 0) {
+  if (questB !== "A" && questB !== "B" && questB !== "a" && questB !== "b") {
+    console.log("Please enter an A or B for the answer for question 2");
+  } else if (questB === "B" || questB === "b") {
     score++;
   } else {
     console.log(
-      "Sorry the correct answer for Question 2 is NYC. Boston is in Massachusetts",
+      "Sorry the correct answer for Question 2 is B (No). Haven't you seen him with the coin flips?",
     );
   }
 } else console.log("You did not answer question 2");
 
+let questC = prompt(
+  "Which is the best NY baseball team? Enter A for The Yankees, enter B for The Mets",
+);
 if (questB !== null) {
-  let questC = prompt(
-    "Which is the best NY baseball team? Enter 0 for The Yankees, enter 1 for The Mets",
-  );
-  questC = questC * 1;
-
-  if (questC !== 0 && questC !== 1) {
-    console.log("Please enter a 0 or 1 for the answer for question 3");
-  } else if (questC === 0) {
+  if (questC !== "A" && questC !== "B" && questC !== "a" && questC !== "b") {
+    console.log("Please enter an A or B for the answer for question 3");
+  } else if (questC === "A" || questC === "a") {
     score++;
   } else {
     console.log(
-      "Sorry the correct answer for Question 3 is The Yankees. The Mets haven't won since 1986",
+      "Sorry the correct answer for Question 3 is A (The Yankees). The Mets haven't won since 1986",
     );
   }
 } else console.log("You did not answer question 3");
