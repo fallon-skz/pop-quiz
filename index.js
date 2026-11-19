@@ -1,11 +1,11 @@
 let score = 0;
 let questA = prompt(
   "Does pineapple belond on pizza? Enter A for No, B for Yes",
-);
+)?.toLowerCase();
 if (questA !== null) {
-  if (questA !== "A" && questA !== "B" && questA !== "a" && questA !== "b") {
+  if (questA !== "a" && questA !== "b") {
     console.log("Please enter an A or B for the answer for question 1");
-  } else if (questA === "A" || questA === "a") {
+  } else if (questA === "a") {
     score++;
   } else {
     console.log(
@@ -16,11 +16,11 @@ if (questA !== null) {
 
 let questB = prompt(
   "Should Morgan go to Vegas? Enter A for Yes or Enter B for No",
-);
+)?.toLowerCase();
 if (questB !== null) {
-  if (questB !== "A" && questB !== "B" && questB !== "a" && questB !== "b") {
+  if (questB !== "a" && questB !== "b") {
     console.log("Please enter an A or B for the answer for question 2");
-  } else if (questB === "B" || questB === "b") {
+  } else if (questB === "b") {
     score++;
   } else {
     console.log(
@@ -30,12 +30,12 @@ if (questB !== null) {
 } else console.log("You did not answer question 2");
 
 let questC = prompt(
-  "Which is the best NY baseball team? Enter A for The Yankees, enter B for The Mets",
-);
-if (questB !== null) {
-  if (questC !== "A" && questC !== "B" && questC !== "a" && questC !== "b") {
+  "Which is the better NY baseball team? Enter A for The Yankees, enter B for The Mets",
+)?.toLowerCase();
+if (questC !== null) {
+  if (questC !== "a" && questC !== "b") {
     console.log("Please enter an A or B for the answer for question 3");
-  } else if (questC === "A" || questC === "a") {
+  } else if (questC === "a") {
     score++;
   } else {
     console.log(
@@ -43,6 +43,7 @@ if (questB !== null) {
     );
   }
 } else console.log("You did not answer question 3");
+
 if (score === 3) {
   console.log(
     `Congratulations! You answered all three questions correctly. Your score for this pop quiz is ${score}`,
